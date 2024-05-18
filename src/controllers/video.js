@@ -151,7 +151,7 @@ const getVideoAsset = async (req, res, handleErr) => {
     // await pipeline(fileStream, res);   // THIS THROWS ERROR
     // file.close();
 
-    fileStream.pipe(res); // THIS WORKS FINE
+    fileStream.pipe(res); // THIS WORKS
     fileStream.on("end", () => {
       console.log("FILE STREAM ENDED");
       file.close();
